@@ -1,5 +1,22 @@
 use empresa 
 
+/*
+1.	Mostrar el número de médicos que pertenecen a cada hospital, ordenado por número descendente de hospital.
+2.	Realizar una consulta en la que se muestre por cada hospital el nombre de las especialidades que tiene.
+3.	Realizar una consulta en la que aparezca por cada hospital y en cada especialidad el número de médicos
+(Tendrás que partir de la consulta anterior y utilizar GROUP BY).
+4.	Obtener por cada hospital el número de empleados.
+5.	Obtener por cada especialidad el número de trabajadores.
+6.	Visualizar la especialidad que tenga más médicos.
+7.	¿Cuál es el nombre del hospital que tiene mayor número de plazas?
+8.	Obtener el número de médicos que pertenecen a cada hospital, mostrando las columnas COD_HOSPITAL, NOMBRE y NÚMERO DE MÉDICOS.
+En el resultado deben aparecer también los datos de los hospitales que no tienen médicos.
+9.	Hallar la media de los salarios del personal (utilizar la función AVG y GROUP BY).
+10.	Visualizar el número de personal que trabaja en el hospital de la tabla	PERSONAL	(utilizar la función COUNT sobre la consulta anterior), agrupados por función.
+11.	Mostrar el número de médicos agrupados por especialidad.
+12.	Mostrar al personal (médicos) del hospital con el salario más alto, su nombre, función, especialidad ordenados de forma ascendente.
+*/
+
 
 /*------------------------------------------------1--------------------------------------------*/
 select count(b) as "Total de medicos", nombre
