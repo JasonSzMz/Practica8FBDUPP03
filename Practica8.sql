@@ -1,5 +1,13 @@
 use empresa 
 
+/*---------------------------------IMPORTANTE--------------------------------
+
+Encontraras diferentes consultas para un mismo ejercicio, elije la consulta de acuerdo a lo que necesites
+
+*/
+
+
+
 /*
 1.	Mostrar el número de médicos que pertenecen a cada hospital, ordenado por número descendente de hospital.
 2.	Realizar una consulta en la que se muestre por cada hospital el nombre de las especialidades que tiene.
@@ -34,12 +42,14 @@ where m.cod_hospital=h.cod_hospital;
 
 
 
-/*--------------------------------------------------3---------------------------------------*/ /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
+/*--------------------------------------------------3---------------------------------------*/ /* Escoge el que necesites (son diferentes) */
 select distinct m.especialidad, count(m.cod_hospital), h.nombre
 from medicos m, hospitales h
 where m.cod_hospital=h.cod_hospital
 group by m.cod_hospital,m.especialidad order by h.nombre asc;
+
 /*-------------------Alternativa a 3-------------------*/
+
 select distinct m.especialidad, count(m.cod_hospital) as "Numero de empleados", h.nombre as "Hospital"
 from hospitales h
 left outer join medicos m
@@ -55,7 +65,7 @@ where p.cod_hospital=h.cod_hospital
 group by h.nombre;
 
     
-/*------------------------------------------------5----------------------------------------*/ /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
+/*------------------------------------------------5----------------------------------------*/   /* Escoge el que necesites (son diferentes) */
 select count(*) as "Total de trabajadores", funcion as "Especialidad"
 from personal
 group by funcion;
@@ -70,7 +80,7 @@ where m.dni=p.dni and p.funcion="medico"
 group by m.especialidad;
 
 
-/*------------------------------------------------6----------------------------------------*/  /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
+/*------------------------------------------------6----------------------------------------*/ /* Escoge el que necesites (son diferentes) */
 select count(*) as "Total de medicos", m.especialidad
 from medicos m, personal p
 where m.dni=p.dni and p.funcion="medico"
@@ -82,7 +92,7 @@ from medicos m, personal p
 where m.dni=p.dni and p.funcion="medico"
 group by m.especialidad) t1;
 
-/*------------------------------------------------7----------------------------------------*/   /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
+/*------------------------------------------------7----------------------------------------*/  /* Escoge el que necesites (son diferentes) */
 select max(num_plazas) as "Numero de plazas", nombre as "Hospital"
 from hospitales;
 
@@ -99,7 +109,7 @@ where h.cod_hospital=p.cod_hospital and p.funcion="medico"
 group by h.nombre;
 
 
-/*------------------------------------------------9----------------------------------------*/  /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
+/*------------------------------------------------9----------------------------------------*/  /* Escoge el que necesites (son diferentes) */
 /* Group by Funcion or specialty*/
  select avg(salario) as "Media del salario", funcion
 from personal
