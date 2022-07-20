@@ -17,7 +17,7 @@ where m.cod_hospital=h.cod_hospital;
 
 
 
-/*--------------------------------------------------3---------------------------------------*/
+/*--------------------------------------------------3---------------------------------------*/ /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
 select distinct m.especialidad, count(m.cod_hospital), h.nombre
 from medicos m, hospitales h
 where m.cod_hospital=h.cod_hospital
@@ -38,7 +38,7 @@ where p.cod_hospital=h.cod_hospital
 group by h.nombre;
 
     
-/*------------------------------------------------5----------------------------------------*/
+/*------------------------------------------------5----------------------------------------*/ /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
 select count(*) as "Total de trabajadores", funcion as "Especialidad"
 from personal
 group by funcion;
@@ -53,7 +53,7 @@ where m.dni=p.dni and p.funcion="medico"
 group by m.especialidad;
 
 
-/*------------------------------------------------6----------------------------------------*/
+/*------------------------------------------------6----------------------------------------*/  /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
 select count(*) as "Total de medicos", m.especialidad
 from medicos m, personal p
 where m.dni=p.dni and p.funcion="medico"
@@ -65,7 +65,7 @@ from medicos m, personal p
 where m.dni=p.dni and p.funcion="medico"
 group by m.especialidad) t1;
 
-/*------------------------------------------------7----------------------------------------*/
+/*------------------------------------------------7----------------------------------------*/   /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
 select max(num_plazas) as "Numero de plazas", nombre as "Hospital"
 from hospitales;
 
@@ -82,7 +82,7 @@ where h.cod_hospital=p.cod_hospital and p.funcion="medico"
 group by h.nombre;
 
 
-/*------------------------------------------------9----------------------------------------*/
+/*------------------------------------------------9----------------------------------------*/  /*Puedes escoger uno de los codigos (son diferentes) si quieres*/
 /* Group by Funcion or specialty*/
  select avg(salario) as "Media del salario", funcion
 from personal
